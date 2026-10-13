@@ -1,0 +1,32 @@
+name: 申请代码访问权限
+description: 申请指定私有仓库的只读访问权限
+title: "[访问申请] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        申请公开可见，请勿填写密码、密钥、私人联系方式或机密资料。管理员将邀请提交本 Issue 的 GitHub 账号。提交后不会自动授权。
+  - type: dropdown
+    id: repository
+    attributes:
+      label: 申请访问的仓库
+      options:
+        - general-data-pipeline（通用数据管线）
+        - vlm-dim-operators（七维小算子）
+        - 两个仓库都需要
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 使用目的
+      description: 简要说明需要代码完成什么工作，不要填写机密信息。
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgment
+    attributes:
+      label: 确认
+      options:
+        - label: 我理解申请需管理员审核，批准后需要接受 GitHub 邀请；默认提供只读权限。
+          required: true
