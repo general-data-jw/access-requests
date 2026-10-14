@@ -6,6 +6,8 @@ body:
     attributes:
       value: |
         申请公开可见，请勿填写密码、密钥、私人联系方式或机密资料。管理员将邀请提交本 Issue 的 GitHub 账号。提交后不会自动授权。
+
+        **审核通过后，管理员会向你的 GitHub 账号发送仓库邀请。请留意 GitHub 通知或绑定邮箱，打开邀请并点击 Accept invitation（接受邀请），才能访问仓库。申请获批或 Issue 关闭不会自动完成授权。申请两个仓库时，请分别接受两个邀请。**
   - type: dropdown
     id: repository
     attributes:
@@ -28,5 +30,5 @@ body:
     attributes:
       label: 确认
       options:
-        - label: 我理解申请需管理员审核，批准后需要接受 GitHub 邀请；默认提供只读权限。
+        - label: 我理解申请获批后还需查收并点击 Accept invitation（接受邀请），才能访问仓库；申请两个仓库需分别接受邀请。默认提供只读权限。
           required: true
